@@ -1,0 +1,37 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.55.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It will check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 466afccef270767f2d56c4d76f8d2643af366548 Changes
+SHA1 3023bdf93fdf7f7a674706dc80a124ada5931653 MANIFEST
+SHA1 811f279b6237a95b8afb3f0df627f18cdd7068ae META.yml
+SHA1 3e0a2d34bf5ba11e9b0f9792bf1f500b25e4e5b6 Makefile.PL
+SHA1 808f2dd89886deecad0603a8be39cc307cb6fbbe README
+SHA1 be37cd083d620fd43b1aa92f2814b71b2c860b44 lib/Catalyst/Controller/Combine.pm
+SHA1 ae95394a6c5f20a731e7eb46ad7ab8fd2a169cad lib/Catalyst/Helper/Controller/Combine.pm
+SHA1 fa88db51c1152c3b2872c788e650785f19793204 t/0-basic.t
+SHA1 a231c5a292c6668eb7cfd899b437f9296014720b t/1-inherit.t
+SHA1 d49a7b42729949dea1397aff364967d114eacd02 t/2-uri.t
+SHA1 113573b7d7e1e1774fcf8524fad581bc3ab71c80 t/lib/TestApp.pm
+SHA1 732fcd3d1e1b0a54164e686662d99a48f3be5057 t/lib/TestApp/Controller/Js.pm
+SHA1 134d23dff229ca4be9fb8ab0d15f8969f48558b5 t/root/static/js/js1.js
+SHA1 ed7a4a2ff5a3558a2505014482cef37c648a26a8 t/root/static/js/js2.js
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.9 (Darwin)
+
+iEYEARECAAYFAkpY0fcACgkQMdK1M/JtLyM8UwCdEHwVDNfYeSAFPahULwf9JkiM
+8AMAn1NFX+qikn2O9kmfecKyE7evQbKP
+=vjwi
+-----END PGP SIGNATURE-----
