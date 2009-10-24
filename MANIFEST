@@ -12,4 +12,3 @@ t/lib/TestApp.pm
 t/root/static/js/js1.js
 t/root/static/js/js2.js
 META.yml
-SIGNATURE    Added here by Module::Build
