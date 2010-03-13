@@ -16,7 +16,8 @@ WriteMakefile
                            'Test::Builder::Tester' => '1.18',
                            'Test::Exception' => '0.27',
                            'Test::Harness' => '3.14',
-                           'Test::More' => '0.86'
+                           'Test::More' => '0.86',
+                           'Text::Glob' => '0.08'
                          },
           'INSTALLDIRS' => 'site',
           'EXE_FILES' => [],
