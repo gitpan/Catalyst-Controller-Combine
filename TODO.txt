@@ -1,0 +1,17 @@
+Things we could add
+-------------------
+
+find out clever HTTP Headers to set.
+
+add to config section:
+    replace => {
+                       # for every file -- how to quote '$1' ??? --> s{$regex}{qq{qq{$replace}}}ee
+        '*'         => [ 'url\\(images/([^)]+)\\)' => 'url(/static/images/$1)' ],
+        
+                       # some files only
+        'jquery*'   => [ qr'color:\s*#123456' => 'color: #987654' ],
+        
+                       # just this file
+        'jquery-ui' => [ ... => ... ],
+    },
+
