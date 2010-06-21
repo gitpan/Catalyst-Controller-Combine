@@ -1,10 +1,17 @@
 package Catalyst::Helper::Controller::Combine;
+BEGIN {
+  $Catalyst::Helper::Controller::Combine::VERSION = '0.12';
+}
 
 use strict;
 
 =head1 NAME
 
 Catalyst::Helper::Controller::Combine - Helper for Combine Controllers
+
+=head1 VERSION
+
+version 0.12
 
 =head1 SYNOPSIS
 
@@ -126,6 +133,12 @@ __PACKAGE__->config(
     #
     #   if you want another minifier change this
     # minifier => 'minify',
+    #
+    #   uncomment if you want to get the 'expire' header set (default:off)
+    # expire => 1,
+    #
+    #   set a different value if wanted
+    # expire_in => 60 * 60 * 24 * 365 * 3, # 3 years
 );
 
 #
