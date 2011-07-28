@@ -15,14 +15,14 @@ build_requires:
   Test::More: 0
   namespace::autoclean: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
-generated_by: 'Dist::Zilla version 2.100991'
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.200007, CPAN::Meta::Converter version 2.110580'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: Catalyst-Controller-Combine
-recommends: {}
 requires:
   Catalyst::Controller: 0
   Catalyst::Runtime: 5.80
@@ -40,4 +40,4 @@ requires:
   Test::More: 0.86
   Text::Glob: 0.08
   namespace::autoclean: 0.09
-version: 0.12
+version: 0.13
