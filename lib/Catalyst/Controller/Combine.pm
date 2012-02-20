@@ -1,6 +1,6 @@
 package Catalyst::Controller::Combine;
-BEGIN {
-  $Catalyst::Controller::Combine::VERSION = '0.13';
+{
+  $Catalyst::Controller::Combine::VERSION = '0.14';
 }
 
 use Moose;
@@ -11,6 +11,7 @@ use Path::Class ();
 use File::stat;
 use List::Util qw(max);
 use Text::Glob qw(match_glob);
+use DateTime;
 
 has dir       => (is => 'rw',
                   default => sub { 'static/' . shift->action_namespace },
@@ -58,7 +59,7 @@ Catalyst::Controller::Combine - Combine JS/CSS Files
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 
@@ -242,7 +243,9 @@ sub do_combine :Action {
         if $self->mimetype;
     $c->response->headers->last_modified($mtime)
         if $mtime;
-    $c->response->headers->expires(time() + $self->expire_in)
+    # $c->response->headers->expires(time() + $self->expire_in)
+    # looks complicated but makes this routine testable...
+    $c->response->headers->expires(DateTime->now->add(seconds => $self->expire_in)->epoch)
         if $self->expire && $self->expire_in;
 
     $c->response->body($minifier->($response) . "\n");

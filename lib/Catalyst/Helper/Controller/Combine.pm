@@ -1,6 +1,6 @@
 package Catalyst::Helper::Controller::Combine;
-BEGIN {
-  $Catalyst::Helper::Controller::Combine::VERSION = '0.13';
+{
+  $Catalyst::Helper::Controller::Combine::VERSION = '0.14';
 }
 
 use strict;
@@ -11,7 +11,7 @@ Catalyst::Helper::Controller::Combine - Helper for Combine Controllers
 
 =head1 VERSION
 
-version 0.13
+version 0.14
 
 =head1 SYNOPSIS
 
