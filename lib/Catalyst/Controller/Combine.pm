@@ -1,6 +1,6 @@
 package Catalyst::Controller::Combine;
 {
-  $Catalyst::Controller::Combine::VERSION = '0.14';
+  $Catalyst::Controller::Combine::VERSION = '0.15';
 }
 
 use Moose;
@@ -59,7 +59,7 @@ Catalyst::Controller::Combine - Combine JS/CSS Files
 
 =head1 VERSION
 
-version 0.14
+version 0.15
 
 =head1 SYNOPSIS
 
@@ -425,7 +425,7 @@ sub _check_dependencies {
     #
     # add the file if existing
     #
-    my $dir = $c->path_to('root', $self->dir);
+    my $dir = $c->path_to('root', $self->dir)->resolve;
     foreach my $file_path (map { $dir->file("$base_name$_") } @{$extensions}) {
         next if (!-f $file_path);
         
